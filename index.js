@@ -4,16 +4,16 @@ const cors = require('cors')
 const socketIO = require('socket.io')
 
 const app = express()
-const port = 4500 || process.env.PORT
+const port = process.env.PORT
 
 let users = [];
 
-// app.use(cors({
-//     origin: 'https://cchat-livid.vercel.app/',
-//     // credentials: true,
-//     // methods: ['GET', 'POST', 'PUT', 'DELETE'],
-// }));
-app.use(cors())
+app.use(cors({
+    origin: 'https://cchat-livid.vercel.app/',
+    // credentials: true,
+    // methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
+// app.use(cors())
 
 app.get("/", (req, res) => {
     res.send('Hell It\'s Working')
