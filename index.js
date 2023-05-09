@@ -10,7 +10,7 @@ let users = [];
 
 app.use(cors({
     origin: 'https://cchat-livid.vercel.app/',
-    // credentials: true,
+    credentials: true,
     // methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 // app.use(cors())
